@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing - Virexa</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="pricing-hero">
+    <h1>Pick the right plan for you</h1>
+    <p class="hero-subtext">
+      It’s completely free to get started. We only charge a <a href="#fees" class="inline-link">small transaction fee</a> for every sale you make on any of our plans.
+    </p>
+
+    <!-- CONTROLS -->
+    <div class="pricing-controls">
+      <div class="currency-dropdown">
+        <span class="flag-icon">🇳🇬</span>
+        <select id="currency-select">
+          <option value="NGN">Nigerian Naira (NGN)</option>
+          <option value="GHS">Ghana Cedi (GHS)</option>
+          <option value="KES">Kenyan Shilling (KES)</option>
+          <option value="USD">US Dollars (USD)</option>
+        </select>
+      </div>
+
+      <div class="billing-tabs-wrapper">
+        <div class="billing-tabs">
+          <button class="tab-btn" data-plan="monthly">Monthly</button>
+          <button class="tab-btn" data-plan="quarterly">Quarterly</button>
+          <button class="tab-btn" data-plan="biannually">Biannually</button>
+          <button class="tab-btn active" data-plan="annually">Annually</button>
+        </div>
+        <div class="save-badge">Save 20%</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING TIERS -->
+  <section class="pricing-cards-section">
+    <div class="pricing-grid">
+
+      <!-- STARTER -->
+      <div class="plan-card">
+        <div class="plan-header">
+          <h3 class="plan-title">STARTER</h3>
+          <p class="plan-desc">
+            <strong>YES, IT'S FREE FOREVER!</strong>, with the Starter plan, you can get started selling any kind of product on Virexa for Free.
+          </p>
+          <div class="price">Free</div>
+        </div>
+        <a href="#" class="btn-card-outline">Get started</a>
+        <ul class="features-list">
+          <li>✓ 40 Products</li>
+          <li>✓ Sell eBooks</li>
+          <li>✓ Sell Services</li>
+          <li>✓ Sell Physical products</li>
+          <li>✓ Read online only eBooks</li>
+          <li>✓ Sell Digital products</li>
+          <li>✓ Sell Subscriptions</li>
+          <li>✓ Sell Tickets</li>
+          <li>✓ Pre order products</li>
+          <li>✓ Coupons - Unlimited</li>
+          <li>✓ Automated Abandoned Cart Emails</li>
+        </ul>
+      </div>
+
+      <!-- PRO -->
+      <div class="plan-card featured">
+        <div class="recommended-header">✨ RECOMMENDED PLAN</div>
+        <div class="plan-header">
+          <h3 class="plan-title">PRO</h3>
+          <p class="plan-desc">
+            <strong>Host your courses & webinar replay videos & files, directly on Virexa</strong>, prevent theft and 10X your sales with our more robust features and integrations.
+          </p>
+          <div class="price">
+            <span id="pro-price">₦ 120,000</span> <span id="pro-period" class="period">every year</span>
+          </div>
+        </div>
+        <a href="#" class="btn-card-primary">Get started</a>
+        <ul class="features-list">
+          <li>✓ Everything in Starter Plan</li>
+          <li>✓ Unlimited products</li>
+          <li>✓ Upload up to 10 courses (Unlimited videos)</li>
+          <li>✓ Priority support</li>
+          <li>✓ Pay what you want product</li>
+          <li>✓ Zapier</li>
+          <li>✓ Sell with Affiliates - Unlimited</li>
+          <li>✓ Coupons - Unlimited</li>
+          <li>✓ WordPress LearnDash Integration</li>
+          <li>✓ Kartra Integration</li>
+          <li>✓ PayPal + Stripe for verified merchants</li>
+          <li>✓ Custom Domain (E.g gamethrones.com)</li>
+        </ul>
+      </div>
+
+      <!-- TURBO -->
+      <div class="plan-card">
+        <div class="plan-header">
+          <h3 class="plan-title">TURBO</h3>
+          <p class="plan-desc">
+            Supercharge your Virexa experience; host more courses, webinar replays, and <strong>host membership sites.</strong>
+          </p>
+          <div class="price">
+            <span id="turbo-price">₦ 225,000</span> <span id="turbo-period" class="period">every year</span>
+          </div>
+        </div>
+        <a href="#" class="btn-card-outline">Get started</a>
+        <ul class="features-list">
+          <li>✓ Everything in Pro Plan</li>
+          <li>✓ Sell 3 Membership (Subscription) courses (Unlimited videos)</li>
+          <li>✓ Sell 25 Single videos/webinar replays (Stream online only)</li>
+          <li>✓ Drip Membership Content</li>
+          <li>✓ Upload up to 25 courses (Unlimited videos)</li>
+          <li>✓ Custom Course Certificates</li>
+        </ul>
+      </div>
+
+      <!-- TURBOPLUS -->
+      <div class="plan-card">
+        <div class="badge-power">⚡ FOR POWER CREATORS</div>
+        <div class="plan-header">
+          <h3 class="plan-title">TURBOPLUS</h3>
+          <p class="plan-desc">
+            For power creators that have a lot of courses and memberships to sell, now you can do so much more!
+          </p>
+          <div class="price">
+            <span id="turboplus-price">₦ 432,000</span> <span id="turboplus-period" class="period">every year</span>
+          </div>
+        </div>
+        <a href="#" class="btn-card-outline">Get started</a>
+        <ul class="features-list">
+          <li>✓ Upload up to 60 courses (Unlimited videos)</li>
+          <li>✓ Sell 60 Single videos/webinar replays (Stream online only)</li>
+          <li>✓ Everything in Turbo Plan</li>
+          <li>✓ Sell 10 Membership (Subscription) courses (Unlimited videos)</li>
+          <li>✓ Free wallet withdrawals (for NGN only, more currencies soon)</li>
+        </ul>
+      </div>
+
+      <!-- ENTERPRISE / CUSTOM -->
+      <div class="plan-card">
+        <div class="badge-power">⚡ FOR POWER CREATORS WITH UNIQUE NEEDS</div>
+        <div class="plan-header">
+          <h3 class="plan-title">ENTERPRISE</h3>
+          <p class="plan-desc">
+            For high-growth creators and organizations with advanced needs. <strong>Request a custom solution</strong> built to scale with your business goals.
+          </p>
+          <div class="price">Custom</div>
+        </div>
+        <a href="#" class="btn-card-outline">Contact Sales</a>
+        <ul class="features-list">
+          <li>✓ Includes everything in the TurboPlus Plan and additional enterprise features</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TRANSACTION FEES -->
+  <section id="fees" class="fees-section">
+    <h2>About our transaction fees</h2>
+    <p>Regardless of your plan, you'll be charged a small transaction fee when you make a successful sale.</p>
+    <div class="fee-card">
+      <div class="fee-rate">4% + ₦50</div>
+      <div class="fee-sub">per sale</div>
+      <a href="#" class="btn-card-primary">Start Selling with Virexa</a>
+    </div>
+  </section>
+
+  <!-- INTERNATIONAL CUSTOMER SECTION (From Screenshot 110) -->
+  <section class="international-section">
+    <div class="international-container">
+      <h2>Never lose an international customer again!</h2>
+      <p class="international-desc">
+        We've integrated multiple payment gateways to ensure you can receive payments from anywhere in the world. We've also added support for local payment methods for our <span class="highlight-blue">14 supported currencies</span>, including PayPal and Stripe for verified merchants, so all your international customers can truly pay without any hassle.
+      </p>
+      <div class="dot-separator"></div>
+      <h3>Some of our supported payment options</h3>
+      
+      <div class="payment-logos">
+        <!-- Placeholders for the payment provider logos seen in the screenshot -->
+        <span class="pay-badge" style="background:#ffcc00; color:#000;">MTN</span>
+        <span class="pay-badge" style="background:#ff6600; color:#fff;">MoMo</span>
+        <span class="pay-badge" style="background:#4a5568; color:#fff;">celtiis</span>
+        <span class="pay-badge" style="background:#000000; color:#fff;">Orange</span>
+        <span class="pay-badge" style="background:#38b2ac; color:#fff;">wave</span>
+        <span class="pay-badge" style="background:#e53e3e; color:#fff;">m-pesa</span>
+        <span class="pay-badge" style="background:#e53e3e; color:#fff;">airtel</span>
+        <span class="pay-badge" style="background:#3182ce; color:#fff;">tigo</span>
+        <span class="pay-badge" style="background:#ecc94b; color:#000;">Tmoney</span>
+        <span class="pay-badge" style="background:#ecc94b; color:#000;">Mixx</span>
+        <span class="pay-badge" style="background:#fff; border: 1px solid #ddd; color:#48bb78;">AFRIGO</span>
+        <span class="pay-badge" style="background:#f7fafc; color:#2b6cb0;">PayPal</span>
+        <span class="pay-badge" style="background:#5a67d8; color:#fff;">stripe</span>
+        <span class="pay-badge" style="background:#fff; border: 1px solid #ddd; color:#e53e3e;">Mastercard</span>
+        <span class="pay-badge" style="background:#fff; border: 1px solid #ddd; color:#ed8936;">Discover</span>
+        <span class="pay-badge" style="background:#2b6cb0; color:#fff;">AMEX</span>
+        <span class="pay-badge" style="background:#fff; border: 1px solid #ddd; color:#2b6cb0;">Diners</span>
+        <span class="pay-badge" style="background:#fff; border: 1px solid #ddd; color:#1a365d;">VISA</span>
+        <span class="pay-badge" style="background:#2c5282; color:#fff;">Verve</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (From Screenshot 111) -->
+  <section class="faq-section-new">
+    <div class="faq-decor-top-left"></div>
+    <div class="faq-decor-bottom-right"></div>
+    
+    <div class="faq-container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <span>How do I get paid ?</span> 
+          <span class="plus-icon">+</span>
+        </div>
+        <div class="faq-item">
+          <span>When funds are in your wallet, withdrawal fees?</span> 
+          <span class="plus-icon">+</span>
+        </div>
+        <div class="faq-item">
+          <span>Minimum Payout / Withdrawal amount?</span> 
+          <span class="plus-icon">+</span>
+        </div>
+        <div class="faq-item">
+          <span>How does Bank transfer option on the store work?</span> 
+          <span class="plus-icon">+</span>
+        </div>
+        <div class="faq-item">
+          <span>Bank transfer payments - I paid but I've not gotten the receipt?</span> 
+          <span class="plus-icon">+</span>
+        </div>
+        <div class="faq-item">
+          <span>How do I receive payments in other currencies like USD</span> 
+          <span class="plus-icon">+</span>
+        </div>
+        <div class="faq-item">
+          <span>What payment options can my customers pay with ?</span> 
+          <span class="plus-icon">+</span>
+        </div>
+        <div class="faq-item">
+          <span>How do you handle payouts of other currencies, e.g USD ?</span> 
+          <span class="plus-icon">+</span>
+        </div>
+      </div>
+      
+      <div class="faq-action">
+        <button class="btn-more-faq">See More FAQs</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner-wrapper">
+    <div class="cta-card">
+      <h2>Start Selling with Virexa</h2>
+      <p>Create a free account in less than 5 minutes and start selling!</p>
+      <div class="cta-buttons">
+        <a href="#" class="btn-white">Get started for free</a>
+        <a href="#" class="btn-transparent">See a live demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="dark-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3 class="footer-logo">Virexa</h3>
+        <p class="brand-desc">© 2026 Virexa. All Rights Reserved.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#">How it Works</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Affiliates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support & Resources</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Help center & Guides</a></li>
+          <li><a href="#">Creator Academy</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Copyright Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const rates = {
+      monthly: { pro: "₦ 12,000", proP: "every month", turbo: "₦ 22,500", turboP: "every month", turboplus: "₦ 45,000", turboplusP: "every month" },
+      quarterly: { pro: "₦ 33,000", proP: "every 3 months", turbo: "₦ 63,000", turboP: "every 3 months", turboplus: "₦ 120,000", turboplusP: "every 3 months" },
+      biannually: { pro: "₦ 67,500", proP: "every 6 months", turbo: "₦ 127,500", turboP: "every 6 months", turboplus: "₦ 240,000", turboplusP: "every 6 months" },
+      annually: { pro: "₦ 120,000", proP: "every year", turbo: "₦ 225,000", turboP: "every year", turboplus: "₦ 432,000", turboplusP: "every year" }
+    };
+
+    const tabs = document.querySelectorAll('.tab-btn');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const plan = tab.getAttribute('data-plan');
+        document.getElementById('pro-price').innerText = rates[plan].pro;
+        document.getElementById('pro-period').innerText = rates[plan].proP;
+        document.getElementById('turbo-price').innerText = rates[plan].turbo;
+        document.getElementById('turbo-period').innerText = rates[plan].turboP;
+        document.getElementById('turboplus-price').innerText = rates[plan].turboplus;
+        document.getElementById('turboplus-period').innerText = rates[plan].turboplusP;
+      });
+    });
+  </script>
+</body>
+</html>

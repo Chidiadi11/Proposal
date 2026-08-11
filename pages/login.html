@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Virexa</title>
+  <link rel="stylesheet" href="/style.css">
+  <!-- FontAwesome for the social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="selar-login-body">
+
+  <!-- 1. Header (Clean, Matching the Screenshot) -->
+  <header class="virexa-header">
+    <nav class="chi"> 
+      <a href="index.html">How It Works</a>
+      <a href="/pages/Pricing.html">Pricing</a>
+      <a href="/pages/Features.html">Features</a>
+      <a href="/pages/learn.html">Learn</a>
+      <a href="/pages/Affiliate Network.html">Affiliate Network</a>
+      
+      <li class="nav-right-group">
+        <a href="login.html" class="active-login">Log In</a>
+        <a href="/pages/start selling.html" class="nav-cta-btn">Start Selling</a>
+      </li>
+    </nav>
+  </header>
+
+  <!-- 2. Main Login Area -->
+  <main class="login-main-container">
+    
+    <!-- Bottom-Left Decorative Illustration -->
+    <div class="bottom-left-illustration">
+      <!-- You can swap this with any SVG or PNG illustration -->
+      <svg width="220" height="220" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 150 C 50 100, 150 100, 150 150 Z" fill="#93c5fd" opacity="0.3"/>
+        <rect x="75" y="70" width="50" height="90" rx="10" fill="#2563eb"/>
+        <rect x="80" y="75" width="40" height="70" rx="6" fill="#ffffff"/>
+        <circle cx="100" cy="152" r="5" fill="#ffffff"/>
+        <circle cx="100" cy="110" r="12" fill="#581cfa" opacity="0.2"/>
+        <path d="M95 110 L105 110 M100 105 L100 115" stroke="#581cfa" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <!-- The Centered Login Card -->
+    <div class="selar-login-card">
+      
+      <h2>Log in to Virexa</h2>
+      <p class="signup-prompt">Don’t have an account? <a href="#">Create one for free.</a></p>
+
+      <form class="selar-form">
+        <!-- Input Field -->
+        <div class="selar-input-group">
+          <label for="username">Username or Email</label>
+          <input type="text" id="username" placeholder="Username or Email address" required>
+        </div>
+
+        <!-- Continue Button -->
+        <button type="submit" class="selar-continue-btn">Continue</button>
+      </form>
+
+      <!-- Custom Divider -->
+      <div class="selar-divider">
+        <span>or continue with</span>
+      </div>
+
+      <!-- Social Logins -->
+      <div class="social-login-group">
+        <button class="social-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" width="18">
+          Login with Google
+        </button>
+        
+        <button class="social-btn">
+          <i class="fa-brands fa-x-twitter"></i>
+          Login with X (or Twitter)
+        </button>
+        
+        <button class="social-btn">
+          <i class="fa-brands fa-facebook-f" style="color: #1877f2;"></i>
+          Login with Facebook
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

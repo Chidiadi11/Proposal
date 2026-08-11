@@ -1,0 +1,1340 @@
+.chi{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 50px 40px; 
+  padding: 60px 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The rest of your CSS stays the same */
+.chi-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.chi-card img {
+  width: 45px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.chi-card h3 {
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.chi-card p {
+  font-family: sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Hero Container */
+.chi-hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 20px;
+  position: relative;
+  font-family: sans-serif;
+}
+
+/* Heading Styling */
+.chi-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/* Purple highlight for "show love!" */
+.chi-hero .highlight {
+  color: #701a75; /* Deep purple/magenta */
+  font-style: italic;
+}
+
+/* The cycling word styling */
+.chi-rotate {
+  color: #e879f9; /* Bright pink/purple */
+  display: inline-block;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Class applied via JS when transitioning out */
+.chi-rotate.fade-out {
+  opacity: 0;
+  transform: translateY(-10px); /* Slides slightly upward as it fades */
+}
+
+/* Paragraph Text */
+.chi-hero p {
+  color: #666;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+/* Button */
+.chi-btn {
+  background-color: #701a75;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chi-btn:hover {
+  background-color: #58125d;
+}
+
+/* Floating Hearts (Optional) */
+.heart {
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0.3;
+}
+.heart-1 { top: 10%; left: 15%; }
+.heart-2 { bottom: 10%; right: 15%; }
+
+/* Main Section Wrapper */
+.chi-payments {
+  background-color: #3b113c; /* Deep dark purple background */
+  color: #ffffff; /* White text color */
+  text-align: center;
+  padding: 80px 10%;
+  font-family: sans-serif;
+}
+
+/* Heading */
+.chi-payments h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
+}
+
+/* Paragraph text */
+.chi-payments p {
+  color: #e2d1e3; /* Soft faded lavender-white color for better readability */
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 850px;
+  margin: 0 auto 50px auto; /* Centers the text block and adds space below */
+}
+
+/* Logos Container */
+.chi-logos-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allows logos to wrap to the next line naturally */
+  justify-content: center; /* Centers logos horizontally */
+  align-items: center; /* Aligns them nicely vertically */
+  gap: 30px 40px; /* Space between rows and columns */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Individual Logo Images */
+.chi-logos-grid img {
+  height: 28px; /* Forces all logos to a uniform height so they look uniform */
+  width: auto;  /* Maintains aspect ratio */
+  object-fit: contain;
+  opacity: 0.9; /* Slightly blends them in with the background */
+  transition: opacity 0.2s;
+}
+
+.chi-logos-grid img:hover {
+  opacity: 1; /* Makes them pop to bright white when hovered */
+}
+
+/* Main Section Wrapper */
+.chi-tools-section {
+  text-align: center;
+  padding: 80px 8%;
+  font-family: sans-serif;
+  background-color: #f8fafc; /* Very light background to make the cards pop */
+}
+
+/* Heading */
+.chi-tools-section h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a; /* Dark navy */
+  margin-bottom: 50px;
+}
+
+/* The Grid Container for the Cards */
+.chi-tools-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+  gap: 25px; /* Space between each card */
+  max-width: 1200px;
+  margin: 0 auto 50px auto; /* Space below the grid for the button */
+}
+
+/* Individual Card Styling */
+.chi-tool-card {
+  background-color: #eef2ff; /* Soft light blue/lavender background */
+  border-radius: 12px; /* Smooth rounded corners */
+  padding: 35px 25px;
+  text-align: left; /* Text aligns left inside the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures the 'Learn more' link stays pushed to the bottom */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+}
+
+/* Icon Wrap Container */
+.chi-card-icon {
+  margin-bottom: 20px;
+}
+
+.chi-card-icon img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* Card Heading */
+.chi-tool-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+/* Card Paragraph Text */
+.chi-tool-card p {
+  font-size: 0.95rem;
+  color: #475569; /* Slate gray text color */
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex-grow: 1; /* Pushes the 'Learn more' link to align neatly across all cards */
+}
+
+/* Learn More Link */
+.chi-card-link {
+  font-size: 0.95rem;
+  color: #4f46e5; /* Electric blue color */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.chi-card-link:hover {
+  text-decoration: underline;
+}
+
+/* See All Features Button */
+.chi-cta-btn {
+  background-color: #58125d; /* Dark purple */
+  color: white;
+  padding: 15px 35px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chi-cta-btn:hover {
+  background-color: #3b113c;
+}
+
+/* 1. Main dark footer background and padding */
+footer {
+  background: #111;
+  color: white;
+  padding: 50px 8%;
+  font-family: sans-serif;
+}
+
+/* 2. Grid layout to align the 4 columns side-by-side */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+  gap: 30px;
+}
+
+/* 3. Column Title styling */
+footer h3 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* 4. Text and Link styling */
+footer p,
+footer a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* 5. Space out list links vertically */
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin-bottom: 10px; /* Spacing between each link */
+}
+
+/* 6. Link Hover effect to make them pop white */
+footer a:hover {
+  color: white;
+}
+
+/* 1. Background styling for the entire login screen */
+.chi-login-body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc; /* Soft, modern light gray background */
+  font-family: sans-serif;
+}
+
+/* 2. Flex wrapper to center the card on any screen size */
+.chi-login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Takes up 100% of the screen height */
+  padding: 20px;
+}
+
+/* 3. The Login Card Container */
+.chi-login-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 420px; /* Perfect desktop width */
+  padding: 40px;
+  border-radius: 16px; /* Smooth rounded corners */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 
+              0 8px 10px -6px rgba(0, 0, 0, 0.05); /* Soft premium drop shadow */
+}
+
+/* 4. Header elements inside the card */
+.chi-login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.chi-login-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #581cfa; /* Signature Virexa Brand Color */
+  margin: 0 0 10px 0;
+}
+
+.chi-login-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* 5. Input spacing and alignment */
+.chi-input-group {
+  margin-bottom: 20px;
+}
+
+.chi-input-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+/* Row with password label and forgot link */
+.chi-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chi-forgot-link {
+  font-size: 0.85rem;
+  color: #581cfa;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.chi-forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Inputs styling */
+.chi-input-group input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  border: 1.5px solid #cbd5e1; /* Clean grey border */
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Input focus effect: turns border purple and adds a soft outer glow */
+.chi-input-group input:focus {
+  border-color: #581cfa;
+  box-shadow: 0 0 0 4px rgba(88, 28, 250, 0.1);
+}
+
+/* 6. Remember Me Checkbox */
+.chi-remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.chi-remember-me input {
+  cursor: pointer;
+}
+
+.chi-remember-me label {
+  font-size: 0.85rem;
+  color: #64748b;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* 7. CTA Login Button */
+.chi-login-btn {
+  width: 100%;
+  background-color: #581cfa;
+  color: #ffffff;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chi-login-btn:hover {
+  background-color: #4312c4; /* Darkens on hover */
+}
+
+/* 8. Bottom Footer of the Card */
+.chi-login-footer {
+  text-align: center;
+  margin-top: 25px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+}
+
+.chi-login-footer p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.chi-login-footer a {
+  color: #581cfa;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.chi-login-footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* ==========================================================
+   MOBILE RESPONSIVENESS - OPTIMIZED FOR ALL PHONE SIZES
+   ========================================================== */
+@media (max-width: 768px) {
+  
+  /* --- The 'or' (Trust) Section --- */
+  section.or {
+    padding: 30px 15px; /* Less padding so it doesn't push elements out */
+    gap: 12px;
+  }
+
+  section.or .avatar {
+    width: 36px;       /* Scale down the avatars so they fit tiny screens */
+    height: 36px;
+    border-width: 2px;
+    margin-left: -8px; /* Snug overlap for smaller images */
+  }
+
+  section.or .trust-info h3 {
+    font-size: 1.15rem; /* Shrink the title so it doesn't wrap awkwardly */
+    letter-spacing: -0.3px;
+  }
+
+  section.or .trust-info p {
+    font-size: 0.85rem; /* Easy-to-read, compact paragraph size */
+  }
+
+  section.or .star-rating {
+    font-size: 1rem;
+  }
+
+  /* --- The 'chi' (Features Grid) Section --- */
+  section.chi {
+    grid-template-columns: 1fr; /* Stack into 1 clean vertical column */
+    padding: 40px 20px;         /* Keeps comfortable margin on sides */
+    gap: 30px;
+  }
+
+  section.chi h2 {
+    font-size: 1.6rem;          /* Make the main title much smaller for phones */
+    line-height: 1.25;
+    margin-bottom: 25px;
+  }
+
+  .chi-card {
+    align-items: center;        /* Center card icons/images on mobile */
+    text-align: center;         /* Center text on mobile */
+  }
+
+  .chi-card img {
+    width: 38px;                /* Make the feature icons slightly smaller */
+    margin-bottom: 12px;
+  }
+
+  .chi-card h3 {
+    font-size: 1.1rem;          /* Scale down card titles */
+    margin-bottom: 8px;
+  }
+
+  .chi-card p {
+    font-size: 0.88rem;         /* Scale down card descriptions */
+  }
+}
+
+
+.testimonial-stack-container {
+  position: relative;
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 40px;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 8px;
+  padding: 60px 50px 50px 100px; /* Left padding makes room for image */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 1;
+}
+
+/* Create the "stacked" effect with pseudo-elements */
+.testimonial-card::before, .testimonial-card::after {
+  content: "";
+  position: absolute;
+  background: white;
+  border-radius: 8px;
+  width: 95%;
+  height: 100%;
+  bottom: -10px;
+  left: 2.5%;
+  z-index: -1;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+  position: absolute;
+  left: -60px; /* Pulls the image out to overlap */
+  top: 50px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+}
+
+.quote { font-size: 1.1rem; line-height: 1.6; color: #333; margin-bottom: 20px; }
+.name { font-weight: 700; color: #000; margin: 0; }
+.role { color: #555; font-size: 0.9rem; }
+
+/* 1. Hide ALL arrows by default */
+.testimonial-card .arrow {
+  display: none;
+}
+
+/* 2. ONLY show the arrows belonging to the currently active card */
+#s1:checked ~ #card1 .arrow,
+#s2:checked ~ #card2 .arrow,
+#s3:checked ~ #card3 .arrow {
+  display: flex;
+}
+
+/* Base Arrow Styling */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #4a0072;
+  color: #ffffff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  user-select: none;
+  z-index: 10;
+}
+
+.prev { left: -75px; }
+.next { right: -75px; }
+
+/* Hide all cards by default */
+.testimonial-card {
+  display: none;
+}
+
+/* Show card based on checked radio */
+#s1:checked ~ #card1,
+#s2:checked ~ #card2,
+#s3:checked ~ #card3 {
+  display: block;
+}
+
+/* Ensure container remains relative for the overlapping image */
+.testimonial-stack-container {
+  position: relative;
+  /* ... keep your other existing styles here ... */
+}
+
+/* Ensure the arrows stay visible */
+input[type="radio"] { display: none; }
+
+
+/* Press Section Styling */
+.press-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  opacity: 0.7;
+}
+
+/* Purple CTA Section Styling */
+.cta-section {
+  padding: 60px 20px;
+}
+
+.cta-box {
+  background-color: #4a0072; /* The virexa purple */
+  color: white;
+  padding: 60px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-box h2 { margin-bottom: 15px; }
+
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary { background: white; color: #4a0072; font-weight: bold; }
+.btn-secondary { background: transparent; color: white; border: 1px solid white; }
+
+/* Press Section Styling */
+.press-section {
+  text-align: center;
+  padding: 60px 20px 100px 20px; /* Extra bottom padding so logos don't get hidden */
+  background-color: #ffffff;
+}
+
+.press-section h3 {
+  font-size: 1.5rem;
+  color: #111111;
+  margin-bottom: 30px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.logo-container img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+/* Purple CTA Section Styling (with Overlap) */
+.cta-section {
+  padding: 0 20px 60px 20px;
+  margin-top: -60px; /* Pulls the purple box upward to overlap */
+  position: relative;
+  z-index: 2;
+}
+
+.cta-box {
+  background-color: #4a0072;
+  color: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.cta-box h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cta-box p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary { 
+  background: white; 
+  color: #4a0072; 
+  border: none; 
+}
+
+.btn-secondary { 
+  background: transparent; 
+  color: white; 
+  border: 1px solid white; 
+}
+
+.logo-container img {
+  height: 55px; /* Increased from 32px to make them much bigger and clearer */
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+/* Main Section Background & Spacing */
+.promo-banner-section {
+  background-color: #ffffff;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Flexbox Layout Container */
+.promo-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* Left Text Column */
+.promo-text-content {
+  flex: 1;
+  max-width: 550px;
+}
+
+.promo-text-content h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111111;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.promo-text-content p {
+  font-size: 1.05rem;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.promo-text-content strong {
+  color: #111111;
+}
+
+/* Action Button */
+.promo-btn {
+  display: inline-block;
+  background-color: #4a0072; /* Selar/Virexa Purple */
+  color: #ffffff;
+  padding: 15px 35px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(74, 0, 114, 0.2);
+}
+
+.promo-btn:hover {
+  background-color: #3b005c;
+  transform: translateY(-2px);
+}
+
+/* Right Image Column */
+.promo-image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ebook-mockup {
+  max-width: 100%;
+  width: 420px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.12));
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 768px) {
+  .promo-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .promo-text-content {
+    max-width: 100%;
+  }
+
+  .promo-text-content h2 {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+/* learn more section*/
+
+/* ==========================================================================
+   1. GLOBAL RESET & CSS VARIABLES
+   ========================================================================== */
+:root {
+  --primary-purple: #4c1248;
+  --dark-purple: #2b112c;
+  --hover-purple: #380b35;
+  --bg-light: #faf6f9;
+  --card-light-bg: #ffffff;
+  --text-muted: #665b65;
+  --text-subtle: #7a6e78;
+  --border-light: #f0e6ed;
+  --underline-pink: #e5b3d6;
+  --heart-pink: #f3a8c3;
+  --card-dark-subtext: #e2d1e0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. HERO SECTION
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  padding: 80px 20px 60px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.subtitle-tag {
+  font-size: 0.95rem;
+  color: var(--text-subtle);
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-heading {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--dark-purple);
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+/* Dynamic Rotating Text Animation */
+.word-rotator {
+  display: inline-block;
+  position: relative;
+  color: var(--primary-purple);
+  text-decoration: underline;
+  text-decoration-color: var(--underline-pink);
+  text-underline-offset: 6px;
+  min-width: 200px;
+  text-align: center;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.word-rotator.fade-out {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.word-rotator.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.highlight-italic {
+  font-style: italic;
+  color: var(--primary-purple);
+}
+
+.description {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+/* CTA Buttons */
+.cta-btn {
+  display: inline-block;
+  background-color: var(--primary-purple);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 14px rgba(76, 18, 72, 0.25);
+}
+
+.cta-btn:hover {
+  background-color: var(--hover-purple);
+  transform: translateY(-1px);
+}
+
+/* Floating Hearts Elements */
+.heart-icon {
+  position: absolute;
+  color: var(--heart-pink);
+  opacity: 0.6;
+  user-select: none;
+  pointer-events: none;
+}
+
+.heart-1 { top: 15%; left: 18%; font-size: 1.8rem; transform: rotate(-15deg); }
+.heart-2 { top: 28%; right: 18%; font-size: 2rem; transform: rotate(12deg); }
+.heart-3 { bottom: 25%; left: 15%; font-size: 1.5rem; transform: rotate(-10deg); }
+.heart-4 { bottom: 18%; right: 16%; font-size: 1.6rem; transform: rotate(15deg); }
+
+/* ==========================================================================
+   3. FEATURES GRID SECTION
+   ========================================================================== */
+.features-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--dark-purple);
+  margin-bottom: 8px;
+}
+
+.section-subtext {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 36px 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.card-dark {
+  background-color: var(--primary-purple);
+  color: #ffffff;
+}
+
+.card-dark p {
+  color: var(--card-dark-subtext);
+}
+
+.card-light {
+  background-color: var(--card-light-bg);
+  color: var(--dark-purple);
+  border: 1px solid var(--border-light);
+}
+
+.card-light p {
+  color: var(--text-muted);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   4. FOR CREATORS BY CREATORS BANNER
+   ========================================================================== */
+.creators-banner {
+  background-color: var(--primary-purple);
+  border-radius: 24px;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 50px 30px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.banner-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.banner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.banner-card {
+  background-color: #ffffff;
+  color: var(--dark-purple);
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-purple);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.2rem;
+}
+
+.banner-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.banner-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.btn-white {
+  display: inline-block;
+  background-color: #ffffff;
+  color: var(--primary-purple);
+  font-weight: 700;
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.btn-white:hover {
+  background-color: #f5eef4;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   5. PAYOUTS SECTION
+   ========================================================================== */
+.payouts-section {
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.payouts-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-purple);
+  margin-bottom: 16px;
+}
+
+.payouts-section p {
+  color: #5d535c;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.payout-link {
+  color: #4a62e8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.payout-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   6. FAQ ACCORDION SECTION
+   ========================================================================== */
+.faq-section {
+  background-color: #fdfafc;
+  padding: 70px 20px;
+  margin-top: 40px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--dark-purple);
+  margin-bottom: 40px;
+}
+
+.faq-list {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #f0e2ec;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--dark-purple);
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-icon {
+  font-size: 1.4rem;
+  color: var(--primary-purple);
+  transition: transform 0.2s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg); /* Rotates '+' into 'x' */
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+  padding-bottom: 20px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   7. FOOTER SECTION
+   ========================================================================== */
+.site-footer {
+  background-color: #ffffff;
+  padding: 70px 20px 40px;
+  border-top: 1px solid #f4eaf1;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-logo {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 2.2rem;
+  color: var(--primary-purple);
+  margin-bottom: 16px;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: var(--primary-purple);
+}
+
+.lang-selector {
+  background: #ffffff;
+  border: 1px solid #d3c4cf;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: #8c808a;
+}
+
+.footer-col h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--dark-purple);
+  margin-bottom: 16px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  transition: color 0.15s ease;
+}
+
+.footer-col a:hover {
+  color: var(--primary-purple);
+}
+
+.accent-link {
+  color: var(--primary-purple) !important;
+}
+
+/* ==========================================================================
+   8. MEDIA QUERIES (MOBILE RESPONSIVENESS)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2.2rem;
+  }
+
+  .word-rotator {
+    min-width: 140px;
+  }
+
+  .heart-icon {
+    display: none;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+
+
+/* SEE LIVE DEMO */
+

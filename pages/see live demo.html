@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virexa Demo Store</title>
+  <link rel="stylesheet" href="/demo.style.css" />
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <main class="container">
+    <!-- PROFILE SECTION -->
+    <section class="profile-section">
+      <div class="profile-info">
+        <div class="avatar">V</div>
+        <div class="profile-text">
+          <h1>Virexa Demo</h1>
+          <p>This is a demo account, feel free to make a test payment to see how simple Virexa is...</p>
+        </div>
+      </div>
+      <div class="profile-socials">
+        <a href="#"><i class="fa-solid fa-link"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="featured-section">
+      <h2 class="section-title">Featured Products</h2>
+      <div class="featured-grid">
+        
+        <!-- Featured Card 1 -->
+        <div class="featured-card">
+          <div class="featured-content">
+            <span class="badge">PHYSICAL</span>
+            <h3>Preorder Physical product.</h3>
+            <p>Demo of a book pre-order.</p>
+            <div class="price">₦1,000</div>
+            <button class="btn-view-details">View Details</button>
+          </div>
+          <div class="featured-image img-pink">
+            <div class="box-icon">📦</div>
+          </div>
+        </div>
+
+        <!-- Featured Card 2 -->
+        <div class="featured-card">
+          <div class="featured-content">
+            <span class="badge">SUBSCRIPTION</span>
+            <h3>Subscription Product</h3>
+            <p>Subscription Product(test for: Ongoing value or community-based content).Charge customers on a recurring basis, daily, monthly, quarterly...</p>
+            <div class="price">₦100</div>
+          </div>
+          <div class="featured-image img-dark">
+            <div class="calendar-icon">📅</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="pagination-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <!-- SEARCH & FILTERS -->
+    <section class="filters-section">
+      <div class="search-sort-row">
+        <div class="search-box">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" placeholder="Search" />
+        </div>
+        <div class="sort-box">
+          Sort: Newest first <i class="fa-solid fa-chevron-down text-small"></i>
+        </div>
+      </div>
+
+      <div class="category-pills">
+        <button class="pill active">All</button>
+        <button class="pill">Physical Product</button>
+        <button class="pill">Stream Online Only</button>
+        <button class="pill">Service</button>
+        <button class="pill">Subscription</button>
+        <button class="pill">Flexible Subscription</button>
+        <button class="pill">Digital Product (eBooks)</button>
+        <button class="pill">Membership Course</button>
+        <button class="pill">Ticket & Masterclass</button>
+      </div>
+    </section>
+
+    <!-- PRODUCT GRID -->
+    <section class="product-grid">
+      <!-- Card 1 -->
+      <div class="product-card">
+        <div class="product-img-wrapper bg-purple">
+          <span class="badge-overlay">COMMUNITY</span>
+          <i class="fa-solid fa-users fa-3x text-white"></i>
+        </div>
+        <div class="product-details">
+          <h4>My Community</h4>
+          <div class="product-meta">
+            <span class="price-small">Free</span>
+            <span class="rating"><i class="fa-solid fa-star"></i> 4.0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="product-card">
+        <div class="product-img-wrapper bg-pink">
+          <span class="badge-overlay">TICKET</span>
+          <i class="fa-solid fa-ticket fa-3x text-white"></i>
+        </div>
+        <div class="product-details">
+          <h4>Ticket & Masterclass - Physical Event (Offline) + Unlimited ticket Sale</h4>
+          <div class="product-meta">
+            <span class="price-small">Free</span>
+            <span class="rating"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="product-card">
+        <div class="product-img-wrapper bg-pink-dark">
+          <span class="badge-overlay">TICKET</span>
+          <i class="fa-solid fa-chalkboard-user fa-3x text-white"></i>
+        </div>
+        <div class="product-details">
+          <h4>Ticket & Masterclass - Online, Recurring Annually</h4>
+          <div class="product-meta">
+            <span class="price-small">₦20,000</span>
+            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="product-card">
+        <div class="product-img-wrapper bg-dark">
+          <span class="badge-overlay">SUBSCRIPTION</span>
+          <i class="fa-regular fa-calendar-days fa-3x text-white"></i>
+        </div>
+        <div class="product-details">
+          <h4>Subscription Product</h4>
+          <div class="product-meta">
+            <span class="price-small">₦100</span>
+            <span class="rating"><i class="fa-solid fa-star"></i> 4.3</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="product-card">
+        <div class="product-img-wrapper bg-dark">
+          <span class="badge-overlay">FLEXIBLE SUBSCRIPTION</span>
+          <i class="fa-regular fa-calendar-check fa-3x text-white"></i>
+        </div>
+        <div class="product-details">
+          <h4>Flexible payment - High ticket product</h4>
+          <div class="product-meta">
+            <span class="price-small">₦2,000,000+</span>
+            <span class="rating"><i class="fa-solid fa-star"></i> 4.6</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="product-card">
+        <div class="product-img-wrapper bg-orange">
+          <span class="badge-overlay">PHYSICAL</span>
+          <i class="fa-solid fa-box-open fa-3x text-white"></i>
+        </div>
+        <div class="product-details">
+          <h4>Shirt with custom options</h4>
+          <div class="product-meta">
+            <span class="price-small">₦900</span>
+            <span class="rating"><i class="fa-solid fa-star"></i> 3.4</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="product-card">
+        <div class="product-img-wrapper bg-purple-light">
+          <span class="badge-overlay">DOWNLOADABLE</span>
+          <div class="pdf-icon">PDF</div>
+        </div>
+        <div class="product-details">
+          <h4>Ebook</h4>
+          <div class="product-meta">
+            <span class="price-small">₦1,000</span>
+            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 8 -->
+      <div class="product-card">
+        <div class="product-img-wrapper bg-purple-light">
+          <span class="badge-overlay">STREAM ONLINE</span>
+          <i class="fa-solid fa-play fa-3x text-white"></i>
+        </div>
+        <div class="product-details">
+          <h4>Webinar Replay (Stream Online)</h4>
+          <div class="product-meta">
+            <span class="price-small">Free</span>
+            <span class="rating"><i class="fa-solid fa-star"></i> 4.4</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGINATION -->
+    <div class="pagination-footer">
+      <div class="result-count">30 Results</div>
+      <div class="page-controls">
+        <span class="page-num active">1</span>
+        <span class="page-num">2</span>
+        <span class="page-nav">Prev</span>
+        <span class="page-nav">Next</span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="demo-footer">
+    Powered By <span class="footer-logo">Virexa</span> <br/>
+    © 2026 Virexa. Demo. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
