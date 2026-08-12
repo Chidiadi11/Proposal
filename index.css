@@ -1231,61 +1231,47 @@ body {
 }
 
 /* ==========================================================================
-   7. FOOTER SECTION
+   7. FOOTER SECTION (UPDATED DARK THEME)
    ========================================================================== */
 .site-footer {
-  background-color: #ffffff;
-  padding: 70px 20px 40px;
-  border-top: 1px solid #f4eaf1;
+  background-color: #0d0d0e;
+  padding: 70px 20px 50px;
+  border-top: 1px solid #1a1a1c;
+  color: #a1a1aa;
 }
 
 .footer-container {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
   gap: 40px;
 }
 
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-logo {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-size: 2.2rem;
-  color: var(--primary-purple);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
-.social-links {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-}
-
-.social-links a {
-  text-decoration: none;
-  color: var(--primary-purple);
-}
-
-.lang-selector {
-  background: #ffffff;
-  border: 1px solid #d3c4cf;
-  padding: 6px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.85rem;
-  margin-bottom: 20px;
-}
-
-.copyright {
-  font-size: 0.85rem;
-  color: #8c808a;
+.footer-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #a1a1aa;
+  max-width: 320px;
 }
 
 .footer-col h4 {
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--dark-purple);
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
@@ -1299,17 +1285,13 @@ body {
 
 .footer-col a {
   text-decoration: none;
-  color: var(--text-muted);
+  color: #71717a;
   font-size: 0.9rem;
   transition: color 0.15s ease;
 }
 
 .footer-col a:hover {
-  color: var(--primary-purple);
-}
-
-.accent-link {
-  color: var(--primary-purple) !important;
+  color: #ffffff;
 }
 
 /* ==========================================================================
@@ -1335,6 +1317,237 @@ body {
 }
 
 
+/* @media */
 
-/* SEE LIVE DEMO */
 
+/* =========================================================
+   MASTER MOBILE RESPONSIVENESS OVERRIDE
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Prevent sections from becoming wider than the phone */
+section,
+header,
+footer,
+main,
+nav,
+div {
+    max-width: 100%;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* General */
+    body {
+        font-size: 15px;
+        overflow-x: hidden;
+    }
+
+    /* Containers */
+    .container,
+    .main-container,
+    .content-container,
+    .footer-container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Headings */
+    h1,
+    .main-heading {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Text */
+    p {
+        max-width: 100%;
+        line-height: 1.6;
+        overflow-wrap: break-word;
+    }
+
+    /* Navigation */
+    nav {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    nav ul {
+        width: 100%;
+        max-width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Hero */
+    .hero,
+    .hero-section {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Any flex layouts */
+    .hero-content,
+    .content,
+    .row,
+    .features,
+    .cards,
+    .services,
+    .products {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Grids */
+    .grid,
+    .cards-grid,
+    .services-grid,
+    .footer-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Cards */
+    .card,
+    .service-card,
+    .product-card {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Images inside cards */
+    .card img,
+    .service-card img,
+    .product-card img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Word rotator */
+    .word-rotator {
+        min-width: 0;
+        width: auto;
+        max-width: 100%;
+    }
+
+    /* Heart */
+    .heart-icon {
+        display: none;
+    }
+
+    /* Buttons */
+    button,
+    .btn,
+    .button {
+        max-width: 100%;
+    }
+
+    /* Forms */
+    input,
+    textarea,
+    select {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Prevent long text from causing horizontal scrolling */
+    * {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .container,
+    .main-container,
+    .content-container,
+    .footer-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    h1,
+    .main-heading {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .hero,
+    .hero-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+}

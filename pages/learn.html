@@ -1,68 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Virexa Navbar Demo</title>
-  <link rel="stylesheet" href="/ALL.style.css" />
-  <!-- FontAwesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virexa - Learn Marketing</title>
+  <link rel="icon" type="image/jpg" href="/img/logo.jpg">
+  <link rel="stylesheet" href="/demo.style.css">
 </head>
 <body>
 
-  <header class="navbar-header">
-    <div class="nav-container">
+  <!-- Header -->
+  <header class="virexa-header">
+    <div class="logo">
+      <a href="#">Virexa</a>
+    </div>
+    <nav class="nav-links">
+      <a href="/pages/blog.html">Blog</a>
+      <a href="/pages/guide.html">Help Desk & Guidance</a>
+      <a href="/pages/FAQs.html">FAQs</a>
+    </nav>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Master Marketing & Grow Your Business</h1>
+      <p>Discover practical marketing strategies, digital tools, and proven techniques to attract customers and grow your business.</p>
+      <div class="hero-buttons">
+        <a href="#courses" class="btn btn-primary">Start Learning</a>
+        <a href="#courses" class="btn btn-secondary">Explore Courses</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. What You'll Learn -->
+  <section class="section container">
+    <div class="section-title">
+      <h2>What You'll Learn</h2>
+      <p>Master key areas of modern digital marketing step-by-step.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="topic-card">
+        <div class="icon">🚀</div>
+        <h3>Digital Marketing</h3>
+        <p>Learn how to promote products and services online effectively.</p>
+      </div>
+      <div class="topic-card">
+        <div class="icon">📱</div>
+        <h3>Social Media Marketing</h3>
+        <p>Build an audience and increase engagement across major platforms.</p>
+      </div>
+      <div class="topic-card">
+        <div class="icon">✍️</div>
+        <h3>Content Marketing</h3>
+        <p>Create high-converting content that attracts and retains customers.</p>
+      </div>
+      <div class="topic-card">
+        <div class="icon">📧</div>
+        <h3>Email Marketing</h3>
+        <p>Learn how to build email lists, automate sequences, and retain clients.</p>
+      </div>
+      <div class="topic-card">
+        <div class="icon">🎨</div>
+        <h3>Branding</h3>
+        <p>Build a strong, distinct, and highly recognizable brand identity.</p>
+      </div>
+      <div class="topic-card">
+        <div class="icon">🔍</div>
+        <h3>SEO</h3>
+        <p>Make your website easy to find and rank higher on search engines.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Featured Courses -->
+  <section class="section bg-light" id="courses">
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured Courses</h2>
+        <p>Explore practical courses designed to get you results faster.</p>
+      </div>
       
-      <!-- Logo -->
-      <a href="#" class="nav-logo">Virexa</a>
-
-      <!-- Navigation Links -->
-      <nav class="nav-links">
-        <a href="#" class="nav-item">How it Works</a>
-        <a href="#" class="nav-item">Pricing</a>
+      <!-- Grid container wrapping ALL 3 course cards -->
+      <div class="grid grid-3">
         
-        <!-- Features Dropdown (Optional/Static) -->
-        <div class="dropdown-wrapper">
-          <a href="#" class="nav-item">Features <i class="fa-solid fa-chevron-down nav-caret"></i></a>
-        </div>
-
-        <!-- Learn Dropdown (Matches Screenshot) -->
-        <div class="dropdown-wrapper">
-          <a href="#" class="nav-item active-dropdown-parent">Learn <i class="fa-solid fa-chevron-down nav-caret"></i></a>
-          
-          <!-- Dropdown Menu Box -->
-          <div class="dropdown-menu">
-            <a href="#" class="dropdown-link">
-              <i class="fa-solid fa-book-open dropdown-icon"></i>
-              <span>Blog</span>
-            </a>
-            <a href="#" class="dropdown-link">
-              <i class="fa-solid fa-graduation-cap dropdown-icon"></i>
-              <span>Youtube & Creator Academy</span>
-            </a>
-            <a href="#" class="dropdown-link">
-              <i class="fa-solid fa-book dropdown-icon"></i>
-              <span>Help Desk & Guides</span>
-            </a>
-            <a href="#" class="dropdown-link">
-              <i class="fa-solid fa-circle-question dropdown-icon"></i>
-              <span>FAQs</span>
-            </a>
+        <!-- Course 1 -->
+        <div class="course-card">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Digital Marketing Fundamentals">
+          <div class="course-card-body">
+            <h3>Digital Marketing Fundamentals</h3>
+            <p>Learn the basics of digital marketing and how businesses use online platforms to reach customers.</p>
+            <a href="#" class="btn-text">Learn More &rarr;</a>
           </div>
         </div>
 
-        <a href="#" class="nav-item">Affiliate Network</a>
-      </nav>
+        <!-- Course 2 -->
+        <div class="course-card">
+          <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80" alt="Social Media Growth">
+          <div class="course-card-body">
+            <h3>Social Media Growth</h3>
+            <p>Learn strategies for growing your audience and creating engaging social media content.</p>
+            <a href="#" class="btn-text">Learn More &rarr;</a>
+          </div>
+        </div>
 
-      <!-- Right Actions -->
-      <div class="nav-actions">
-        <a href="#" class="lang-selector">EN <i class="fa-solid fa-chevron-down text-small"></i></a>
-        <a href="#" class="login-btn">Log In</a>
-        <a href="#" class="cta-btn">Start Selling</a>
-      </div>
+        <!-- Course 3 -->
+        <div class="course-card">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Content Strategy Mastery">
+          <div class="course-card-body">
+            <h3>Content Strategy Mastery</h3>
+            <p>Master storytelling and high-converting campaigns to convert visitors into loyal clients.</p>
+            <a href="#" class="btn-text">Learn More &rarr;</a>
+          </div>
+        </div>
 
+      </div> <!-- Grid ends here after Course 3 -->
     </div>
-  </header>
+  </section>
+
+  <!-- 4. Why Learn With Us? -->
+  <section class="section container">
+    <div class="section-title">
+      <h2>Why Learn With Us?</h2>
+      <p>Built for creators and entrepreneurs who want real growth.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="feature-box">
+        <h3>⚡ Practical Lessons</h3>
+        <p>Learn techniques you can actually use immediately in your business or career.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🌱 Beginner Friendly</h3>
+        <p>Our lessons are designed to be easy to understand, even if you're just starting out.</p>
+      </div>
+      <div class="feature-box">
+        <h3>⏱️ Learn at Your Own Pace</h3>
+        <p>Access lessons and resources whenever you're ready, on any device.</p>
+      </div>
+      <div class="feature-box">
+        <h3>📈 Real-World Strategies</h3>
+        <p>Learn marketing methods actively used by top modern businesses and brands.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Learning Resources -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-title">
+        <h2>Learning Resources</h2>
+        <p>Everything you need to level up your marketing knowledge.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="resource-card">
+          <span class="resource-icon">📚</span>
+          <h4>Courses</h4>
+          <p>Structured video and written modules.</p>
+        </div>
+        <div class="resource-card">
+          <span class="resource-icon">🎥</span>
+          <h4>Video Lessons</h4>
+          <p>Quick overviews and walkthroughs.</p>
+        </div>
+        <div class="resource-card">
+          <span class="resource-icon">📝</span>
+          <h4>Marketing Guides</h4>
+          <p>In-depth strategies and frameworks.</p>
+        </div>
+        <div class="resource-card">
+          <span class="resource-icon">💡</span>
+          <h4>Marketing Tips</h4>
+          <p>Bite-sized, actionable growth hacks.</p>
+        </div>
+        <div class="resource-card">
+          <span class="resource-icon">📊</span>
+          <h4>Case Studies</h4>
+          <p>Real breakdowns of successful campaigns.</p>
+        </div>
+        <div class="resource-card">
+          <span class="resource-icon">📥</span>
+          <h4>Free Resources</h4>
+          <p>Downloadable templates & checklists.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Purple Banner -->
+  <section class="banner-wrapper">
+    <div class="purple-cta-card">
+      <h2>Start Selling with virexa</h2>
+      <p>Create a free account in less than 5 minutes and start selling!</p>
+      <div class="cta-card-buttons">
+        <a href="#" class="btn btn-purple-dark">Get started for free</a>
+        <a href="#" class="btn btn-purple-outline">See a live demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Footer -->
+  <footer class="virexa-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3 class="footer-logo">Virexa</h3>
+        <p>Virexa is the easiest way to sell your digital products and services to anyone, anywhere in the world.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Features</h4>
+        <ul>
+          <li><a href="#">Digital Products</a></li>
+          <li><a href="#">Ebooks</a></li>
+          <li><a href="#">Online Courses</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Affiliate Network</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact & Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Support</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

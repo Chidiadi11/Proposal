@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virexa | Frequently Asked Questions</title>
+     <link rel="icon" type="image/jpg" href="/img/logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --virexa-purple: #3b093c;
+            --virexa-purple-light: #521254;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-cream: #fffdfa;
+            --border-color: #f1f5f9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Updated Minimalist Header --- */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #f1f5f9;
+            padding: 20px 60px;
+        }
+
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--virexa-purple);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .login-link {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-main);
+            text-decoration: none;
+            text-transform: lowercase;
+        }
+
+        .login-link:hover {
+            color: var(--virexa-purple);
+        }
+
+        .btn-start {
+            background-color: var(--virexa-purple);
+            color: #ffffff !important;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn-start:hover {
+            background-color: var(--virexa-purple-light);
+        }
+
+        /* --- FAQ Hero Banner Section --- */
+        .faq-hero {
+            background-color: var(--bg-cream);
+            padding: 80px 20px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .faq-hero h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 16px;
+        }
+
+        .faq-hero p {
+            font-size: 15px;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .faq-hero p a {
+            color: var(--virexa-purple);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .faq-hero p a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Interactive Tabs --- */
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            border-bottom: 1px solid #e2e8f0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-muted);
+            padding-bottom: 12px;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.2s;
+        }
+
+        .tab-btn:hover {
+            color: var(--virexa-purple);
+        }
+
+        .tab-btn.active {
+            color: var(--virexa-purple);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--virexa-purple);
+        }
+
+        /* --- Accordion FAQ Section --- */
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto 80px;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 22px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .faq-question:hover {
+            color: var(--virexa-purple);
+        }
+
+        .faq-question .icon {
+            font-size: 18px;
+            color: var(--text-muted);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-question .icon {
+            transform: rotate(45deg);
+            color: var(--virexa-purple);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 200px;
+            padding-bottom: 22px;
+        }
+
+        /* --- Start Selling Card Box --- */
+        .cta-wrapper {
+            padding: 0 40px;
+            margin-bottom: 100px;
+        }
+
+        .cta-card {
+            background-color: var(--virexa-purple);
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 70px 20px;
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(59, 9, 60, 0.15);
+        }
+
+        .cta-card h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .cta-card p {
+            font-size: 15px;
+            opacity: 0.9;
+            margin-bottom: 36px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .btn-white {
+            background: #ffffff;
+            color: var(--text-main);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .btn-white:hover {
+            background: #f1f5f9;
+        }
+
+        .btn-outline-custom {
+            background: transparent;
+            border: 1.5px solid rgba(255, 255, 255, 0.7);
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .btn-outline-custom:hover {
+            border-color: #ffffff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* --- Dark Footer Section --- */
+        footer {
+            background-color: #121212;
+            color: #ffffff;
+            padding: 70px 60px 50px;
+            border-top: 1px solid #222222;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2.2fr 1fr 1fr 1.2fr;
+            gap: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .footer-col p {
+            font-size: 13px;
+            color: #94a3b8;
+            line-height: 1.6;
+            max-width: 300px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+        }
+
+        /* --- Floating Chat Widget Button --- */
+        .chat-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 52px;
+            height: 52px;
+            background-color: var(--virexa-purple);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tab-container {
+                gap: 20px;
+            }
+            .faq-hero h1 {
+                font-size: 30px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation matching Screenshot 159 -->
+    <header>
+        <div class="header-inner">
+            <nav class="nav-links">
+                <a href="/pages/how it works.html">How It Works</a>
+                <a href="/pages/pricing.html">Pricing</a>
+                <a href="/pages/learn.html">Learn</a>
+                <a href="/pages/Affiliate Network.html">Affiliate Network</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="/pages/login.html" class="login-link">login</a>
+                <a href="/pages/start selling.html" class="btn-start">Start Selling</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Title -->
+    <section class="faq-hero">
+        <h1>Frequently Asked Questions</h1>
+        <p>
+            Looking for answers about Virexa?<br>
+            Our comprehensive <a href="signin.html">helpdesk</a> has all the information you need. If you still have questions, 
+            <a href="mailto:hello@virexa.com">hello@virexa.com</a>
+        </p>
+
+        <!-- Category Tabs -->
+        <div class="tab-container">
+            <button class="tab-btn active" onclick="switchTab('merchants')">For Merchants</button>
+            <button class="tab-btn" onclick="switchTab('affiliates')">For Affiliates</button>
+            <button class="tab-btn" onclick="switchTab('customers')">For Customers</button>
+        </div>
+    </section>
+
+    <!-- Accordions Container -->
+    <main class="faq-container">
+        
+        <!-- Tab 1: For Merchants -->
+        <div id="merchants" class="tab-content active">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I pay affiliates of my store ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    Virexa automatically processes and handles all affiliate commissions directly upon a successful payment. You don't need to manually calculate or transfer payouts.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I get paid ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    Payments are deposited directly into your linked bank account or wallet according to your local payout schedule.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>When funds are in your wallet, withdrawal fees ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    Withdrawal fees depend on your currency and region. Most payouts have standard processing fees clearly displayed in your dashboard.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Minimum Payout / Withdrawal amount ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    The minimum withdrawal threshold varies by currency to keep transaction costs reasonable.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Does Virexa handle the delivery ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    Yes, for digital products Virexa delivers them automatically to buyers right after payment confirmation.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I set up coupons ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    Go to your dashboard, navigate to "Coupons", and create custom discount codes with percentage-based or fixed value discounts.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How reliable and secure is the payment platform ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    We utilize PCI-DSS compliant encryption and partner with industry-grade payment processors to ensure all data is 100% secure.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's the fee for using Virexa ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    Creating an account is free! We charge a small transaction fee per sale made through your store.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 2: For Affiliates -->
+        <div id="affiliates" class="tab-content">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I receive payment in other currencies ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    Virexa automatically converts international payments so you can withdraw payouts directly to your primary local currency bank account.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What if I have an issue with my payout ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    You can contact our support line via the chat widget or email us at support@virexa.com with your transaction ID.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is the cookies duration for affiliate links ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    Standard affiliate link tracking lasts for 30 days from the moment a customer clicks your unique link.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Do I get an extra commission or reward as an affiliate marketer with the highest sales ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    Yes! Top-performing affiliates on Virexa qualify for monthly bonus pools and leaderboards with cash incentives.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 3: For Customers -->
+        <div id="customers" class="tab-content">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I access a digital product I purchased ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    Immediately after payment, an access link is sent to your email address. You can also log into your buyer account anytime.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What payment options can my customers pay with ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    We accept standard credit/debit cards, bank transfers, mobile money, and foreign card options depending on the currency.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>When do I get paid ?</span>
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="faq-answer">
+                    Merchant payouts are processed immediately upon clearance of customer payment settlements.
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Start Selling CTA Card Wrapper -->
+    <div class="cta-wrapper">
+        <div class="cta-card">
+            <h2>Start Selling with virexa</h2>
+            <p>Create a free account in less than 5 minutes and start selling!</p>
+            <div class="cta-buttons">
+                <a href="/pages/start selling.html" class="btn-white">Get started for free</a>
+                <a href="/pages/see live demo.html" class="btn-outline-custom">See a live demo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dark Footer Section -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Virexa</h3>
+                <p>Virexa is the easiest way to sell your digital products and services to anyone, anywhere in the world.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Features</h3>
+                <ul>
+                    <li><a href="#">Digital Products</a></li>
+                    <li><a href="#">Ebooks</a></li>
+                    <li><a href="#">Online Courses</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Affiliate Network</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact & Support</h3>
+                <ul>
+                    <li><a href="signin.html">Help Center</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Widget Button -->
+    <div class="chat-btn">
+        <i class="fas fa-comment-alt"></i>
+    </div>
+
+    <!-- Tab Switching & Accordion Logic -->
+    <script>
+        // Tab Switcher
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            event.target.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // Accordion Toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

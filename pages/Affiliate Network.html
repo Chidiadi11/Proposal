@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virexa Affiliate Network</title>
+     <link rel="icon" type="image/jpg" href="/img/logo.jpg">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,800&display=swap" rel="stylesheet">
+    <style>
+        /* RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a1a1a;
+            background-color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* BRAND COLORS & VARIABLES */
+        :root {
+            --primary: #591054; 
+            --primary-hover: #450c41;
+            --light-green: #eef7f2;
+            --text-dark: #111111;
+            --text-gray: #555555;
+            --border-color: #eaeaea;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 14px 28px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline-white {
+            background-color: #ffffff;
+            color: var(--primary);
+            border: 1px solid #ffffff;
+        }
+
+        .btn-transparent-border {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            transition: background-color 0.3s;
+        }
+
+        .btn-transparent-border:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            background-color: #ffffff;
+        }
+
+        .brand-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 800;
+            font-style: italic;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-login {
+            font-weight: 500;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 80px 0 120px 0;
+            background: linear-gradient(to bottom, #f7fdfa 0%, #ffffff 100%);
+            position: relative;
+        }
+
+        .hero-subtitle {
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 24px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Abstract Green Shapes */
+        .shape {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+        }
+        .shape-top-left {
+            top: 60px;
+            left: 10%;
+        }
+        .shape-bottom-right {
+            bottom: 60px;
+            right: 15%;
+        }
+        .shape-inner-solid {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #d1eedc;
+            border-radius: 8px;
+            top: 0;
+            left: 0;
+        }
+        .shape-inner-outline {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #28a745;
+            border-radius: 8px;
+            bottom: 0;
+            right: 0;
+        }
+
+        /* SPLIT SECTIONS */
+        .split-section {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .split-content h2 {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .split-content p {
+            font-size: 16px;
+            color: var(--text-gray);
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        /* GLOBE IMAGE PLACEHOLDER */
+        .globe-illustration {
+            width: 100%;
+            height: 400px;
+            background-color: #f8f9fc;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-image: radial-gradient(circle, #e2e8f0 2px, transparent 2px);
+            background-size: 20px 20px;
+        }
+        
+        /* HOW TO JOIN LIST */
+        .join-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .join-step {
+            padding-left: 20px;
+            border-left: 2px solid transparent;
+        }
+
+        .join-step.active {
+            border-left: 3px solid var(--primary);
+        }
+
+        .join-step h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .join-step p {
+            font-size: 15px;
+            color: var(--text-gray);
+            margin-bottom: 0;
+        }
+
+        /* IMAGE PLACEHOLDERS */
+        .image-card-wrapper {
+            position: relative;
+            background-color: #fcfcfc;
+            border-radius: 16px;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .connect-bank-popup {
+            position: absolute;
+            bottom: -20px;
+            left: -40px;
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            width: 280px;
+        }
+
+        .connect-bank-popup h5 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .connect-bank-popup p {
+            font-size: 12px;
+            color: var(--text-gray);
+            margin-bottom: 16px;
+        }
+
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 13px;
+            border: 1px solid var(--border-color);
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* FLOATING CARDS (Boost Sales) */
+        .floating-cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-end;
+        }
+
+        .floating-card {
+            background: #ffffff;
+            padding: 20px 24px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            width: 85%;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        
+        .floating-card:nth-child(2) {
+            width: 95%;
+        }
+
+        .card-icon {
+            font-size: 24px;
+            background: #f9f9f9;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        /* FAQs SECTION */
+        .faq-section {
+            padding: 60px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* BOTTOM CTA BANNER */
+        .bottom-cta-section {
+            padding: 40px 0 100px 0;
+            background-color: #faf9fb;
+        }
+
+        .cta-banner {
+            background: var(--primary);
+            border-radius: 20px;
+            padding: 70px 40px;
+            text-align: center;
+            color: #ffffff;
+            box-shadow: 0 20px 40px rgba(89, 16, 84, 0.15);
+        }
+
+        .cta-banner h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .cta-banner p {
+            font-size: 16px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        /* DARK FOOTER SECTION */
+        .dark-footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 80px 0;
+        }
+
+        .dark-footer-container {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #ffffff;
+        }
+
+        .footer-col p {
+            color: #a3a3a3;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul li a {
+            color: #a3a3a3;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .split-grid {
+                grid-template-columns: 1fr;
+            }
+            .floating-cards-container {
+                align-items: center;
+            }
+            .floating-card {
+                width: 100%;
+            }
+            .nav-links {
+                display: none;
+            }
+            .dark-footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .dark-footer-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar container">
+        <a href="#" class="brand-logo">Virexa</a>
+        <div class="nav-links">
+            <a href="#">Pricing</a>
+            <a href="#">Explore Marketplace</a>
+            <a href="#">Explore Challenges</a>
+        </div>
+        <div class="nav-actions">
+            <a href="/pages/login.html" class="nav-login">Login</a>
+            <a href="#" class="btn btn-primary">Become an Affiliate</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <!-- Decorative Shapes -->
+        <div class="shape shape-top-left">
+            <div class="shape-inner-solid"></div>
+            <div class="shape-inner-outline"></div>
+        </div>
+        <div class="shape shape-bottom-right">
+            <div class="shape-inner-solid"></div>
+            <div class="shape-inner-outline"></div>
+        </div>
+
+        <div class="container">
+            <p class="hero-subtitle">Join the Virexa Affiliate Network</p>
+            <h1>EARN EXTRA INCOME PROMOTING OTHER PEOPLE'S PRODUCTS</h1>
+            <p>Explore the leading affiliate marketplace in Africa with thousands of products to choose from and start promoting right away.</p>
+            <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <!-- GLOBE SECTION -->
+    <section class="split-section">
+        <div class="container split-grid">
+            <div class="split-content">
+                <h2>Join the biggest Affiliate Network in Africa.</h2>
+                <p>Virexa is the largest marketplace for digital creators in Africa, creators use Virexa to sell any kind of digital product or service today to customers all over the world and you can help them reach more people and earn by doing that.</p>
+                <p>We have over 1,000 ready to sell products on the affiliate network.</p>
+                <p>Finally, you have a wide range of products you can start selling right now as an affiliate and earn a commission when someone buys a product from your affiliate link.</p>
+            </div>
+            <div class="globe-illustration">
+                <!-- Abstract Globe Representation -->
+                <svg width="280" height="280" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="90" fill="none" stroke="#d0d5e0" stroke-width="1" stroke-dasharray="2 4"/>
+                    <path d="M 20 100 Q 100 180 180 100" fill="none" stroke="#6b7280" stroke-width="1"/>
+                    <path d="M 20 100 Q 100 20 180 100" fill="none" stroke="#6b7280" stroke-width="1"/>
+                    <path d="M 100 10 Q 180 100 100 190" fill="none" stroke="#6b7280" stroke-width="1"/>
+                    <path d="M 100 10 Q 20 100 100 190" fill="none" stroke="#6b7280" stroke-width="1"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- HEADER ONLY SECTION -->
+    <section style="text-align: center; padding: 40px 0;">
+        <h2 style="font-size: 36px; font-weight: 800;">How to join the Virexa<br>affiliate network</h2>
+    </section>
+
+    <!-- HOW TO JOIN SECTION -->
+    <section class="split-section" style="padding-top: 0;">
+        <div class="container split-grid">
+            <div class="join-steps">
+                <div class="join-step">
+                    <h4>Sign up</h4>
+                </div>
+                <div class="join-step active">
+                    <h4>Subscribe to our yearly plan to access the Affiliate Network - NGN 3,000</h4>
+                </div>
+                <div class="join-step">
+                    <p>Browse our fantastic catalog of products and choose the product you want to be an affiliate of</p>
+                </div>
+                <div class="join-step">
+                    <p>Get your affiliate link, recommend it to people, you make a sale & earn a commission.</p>
+                </div>
+                <a href="#" class="btn btn-primary" style="align-self: flex-start; margin-top: 10px;">Subscribe Now</a>
+            </div>
+            
+            <div class="image-card-wrapper" style="background-color: #f3f0f7; height: 400px; border-radius: 20px;">
+                <!-- Placeholder for the woman on phone image -->
+                <div style="width: 100%; height: 100%; background: #e0dbe6; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #a39cae;">Image Placeholder</div>
+                
+                <!-- Overlay Card -->
+                <div class="connect-bank-popup">
+                    <h5>Connect your bank account</h5>
+                    <p>Enter your details to start receiving payments directly to your bank account.</p>
+                    <button class="btn-small">Connect</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOST SALES SECTION -->
+    <section class="split-section" style="background-color: #faf9fb;">
+        <div class="container split-grid">
+            <div class="split-content">
+                <h2>Boost your sales with Virexa's Affiliate Network</h2>
+                <p>Want to leverage the Virexa Affiliate Network? here's how to list your products for amazing affiliates to find</p>
+                <br>
+                <a href="#" class="btn btn-primary">Subscribe now</a>
+            </div>
+            
+            <div class="floating-cards-container">
+                <div class="floating-card">
+                    <div class="card-icon">🚀</div>
+                    Sign up on Virexa
+                </div>
+                <div class="floating-card">
+                    <div class="card-icon">🤩</div>
+                    Upload your Product
+                </div>
+                <div class="floating-card">
+                    <div class="card-icon">🤑</div>
+                    Click on the tab to list your product on the affiliate marketplace.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMUNITY SECTION -->
+    <section class="split-section">
+        <div class="container split-grid">
+            <div class="split-content">
+                <h2>Learn, connect, and grow with top affiliates.</h2>
+                <p>Join a thriving community of affiliates sharing insights, strategies, and opportunities to grow faster together.</p>
+                <br>
+                <a href="#" class="btn btn-primary">Join Affiliate Community</a>
+            </div>
+            
+            <div style="display: flex; justify-content: center; position: relative;">
+                <!-- Graphic Placeholder -->
+                <div style="width: 250px; height: 250px; background: radial-gradient(circle, #f0e6ed 0%, transparent 70%); position: relative;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #bc7fa4; width: 80px; height: 80px; border-radius: 20px 20px 0 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 10px 20px rgba(188, 127, 164, 0.4);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div style="text-align: center; padding: 40px 0; background: #faf9fb;">
+        <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 8px;">Reviews/Testimonials</h2>
+        <p style="color: var(--text-gray);">See what some of our customers have to say about using Virexa.</p>
+    </div>
+
+    <!-- FAQS -->
+    <section class="faq-section container">
+        <div class="faq-item">
+            <span>How do I receive payment in other currencies?</span>
+            <span>+</span>
+        </div>
+        <div class="faq-item">
+            <span>What if I have an issue with my payout?</span>
+            <span>+</span>
+        </div>
+        <div class="faq-item">
+            <span>What is the cookies duration for affiliate links?</span>
+            <span>+</span>
+        </div>
+        <div class="faq-item">
+            <span>Do I get an extra commission or reward as an affiliate marketer with the highest sales?</span>
+            <span>+</span>
+        </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="bottom-cta-section">
+        <div class="container">
+            <div class="cta-banner">
+                <h2>Start Selling with virexa</h2>
+                <p>Create a free account in less than 5 minutes and start selling!</p>
+                <div class="cta-buttons">
+                    <a href="/pages/start selling.html" class="btn btn-outline-white">Get started for free</a>
+                    <a href="/pages/see live demo.html" class="btn btn-transparent-border">See a live demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DARK FOOTER -->
+    <footer class="dark-footer">
+        <div class="dark-footer-container">
+            <!-- Column 1 -->
+            <div class="footer-col">
+                <h4>Virexa</h4>
+                <p>Virexa is the easiest way to sell your digital products and services to anyone, anywhere in the world.</p>
+            </div>
+            
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h4>Features</h4>
+                <ul>
+                    <li><a href="#">Digital Products</a></li>
+                    <li><a href="#">Ebooks</a></li>
+                    <li><a href="#">Online Courses</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Affiliate Network</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h4>Contact & Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

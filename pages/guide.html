@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virexa Help Center</title>
+     <link rel="icon" type="image/jpg" href="/img/logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --virexa-purple: #4a0d4e;
+            --virexa-orange: #e87c1e;
+            --text-main: #222222;
+            --text-muted: #666666;
+            --bg-gray: #f8f9fa;
+            --border-light: #eaeaea;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-main);
+            scroll-behavior: smooth;
+        }
+
+        /* --- Header & Hero Section --- */
+        .hero-section {
+            background-color: var(--virexa-purple);
+            color: #ffffff;
+            padding-bottom: 60px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .logo-icon {
+            background-color: rgba(255,255,255,0.1);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 20px;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Language Dropdown */
+        .lang-dropdown {
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lang-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background: #ffffff;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            min-width: 120px;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 100;
+        }
+
+        .lang-menu.show {
+            display: flex;
+        }
+
+        .lang-menu button {
+            background: none;
+            border: none;
+            padding: 12px 16px;
+            text-align: left;
+            width: 100%;
+            cursor: pointer;
+            font-size: 14px;
+            color: var(--text-main);
+            transition: background 0.2s;
+        }
+
+        .lang-menu button:hover {
+            background: var(--bg-gray);
+        }
+
+        /* Hero Content */
+        .hero-content {
+            text-align: center;
+            padding: 40px 20px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            max-width: 700px;
+            margin: 0 auto;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .search-container input {
+            flex: 1;
+            padding: 16px 20px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+        }
+
+        .search-container button {
+            background-color: var(--virexa-orange);
+            color: #ffffff;
+            border: none;
+            padding: 0 24px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .search-container button:hover {
+            background-color: #d16d18;
+        }
+
+        /* --- Main Content Grid --- */
+        .main-container {
+            max-width: 1000px;
+            margin: -30px auto 0;
+            background: #ffffff;
+            position: relative;
+            z-index: 10;
+            padding: 40px;
+        }
+
+        .cards-row {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-bottom: 60px;
+            gap: 40px;
+        }
+
+        .info-card {
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .info-card .icon-img {
+            width: 64px;
+            margin-bottom: 16px;
+        }
+
+        .info-card h3 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .info-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* --- Popular Articles --- */
+        .popular-section {
+            margin-bottom: 60px;
+        }
+
+        .popular-section h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--text-main);
+        }
+
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .article-list li {
+            margin-bottom: 16px;
+        }
+
+        .article-list a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 15px;
+            padding-bottom: 16px;
+        }
+
+        .article-list a i {
+            color: #a0a0a0;
+            font-size: 18px;
+        }
+
+        .article-list a:hover {
+            color: var(--virexa-purple);
+        }
+
+        /* --- Footer Section --- */
+        .bottom-action {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--bg-gray);
+            border-top: 1px solid var(--border-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .bottom-action h2 {
+            font-size: 24px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .bottom-action p {
+            color: var(--text-muted);
+            margin: 0 0 10px 0;
+        }
+
+        .btn-ticket {
+            background-color: #6c757d;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn-ticket:hover {
+            background-color: #5a6268;
+        }
+
+        .copyright-bar {
+            background-color: #222222;
+            color: #aaaaaa;
+            text-align: center;
+            padding: 16px;
+            font-size: 13px;
+        }
+
+        /* --- Floating Elements (Chat & Scroll) --- */
+        .scroll-top {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--virexa-orange);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .chat-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            align-items: flex-end;
+            gap: 16px;
+            z-index: 1000;
+        }
+
+        .chat-bubble-popup {
+            background: #ffffff;
+            padding: 16px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            font-size: 14px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .chat-bubble-popup::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 20px;
+            border-width: 8px 8px 0;
+            border-style: solid;
+            border-color: #ffffff transparent transparent transparent;
+        }
+
+        .chat-btn {
+            width: 56px;
+            height: 56px;
+            background-color: var(--virexa-purple);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .chat-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body id="top">
+
+    <!-- Hero Background Section -->
+    <section class="hero-section">
+        <header>
+            <a href="#" class="logo-area">
+                <div class="logo-text">Virexa</div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="/index.html" data-i18n="nav_home">Home</a>
+                <a href="/pages/SS.html" data-i18n="nav_signin">Sign In</a>
+                
+                <div class="lang-dropdown" id="langToggle">
+                    <i class="fas fa-globe"></i>
+                    <span id="currentLangText">English</span>
+                    <i class="fas fa-caret-down" style="font-size: 12px;"></i>
+                    
+                    <div class="lang-menu" id="langMenu">
+                        <button onclick="changeLanguage('en')">English</button>
+                        <button onclick="changeLanguage('fr')">Français (French)</button>
+                        <button onclick="changeLanguage('es')">Español (Spanish)</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="hero-content">
+            <h1 data-i18n="hero_title">Welcome to Virexa</h1>
+            <p data-i18n="hero_subtitle">Search our knowledge base or submit a ticket.</p>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search articles" data-i18n-placeholder="search_placeholder">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="main-container">
+        
+        <div class="cards-row">
+            <div class="info-card">
+                <!-- SVG mimicking the exact document icon in Screenshot 151 -->
+                <svg class="icon-img" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13" stroke="#e87c1e"></line>
+                    <line x1="16" y1="17" x2="8" y2="17" stroke="#e87c1e"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <h3 data-i18n="card1_title">Knowledge Base</h3>
+                <p data-i18n="card1_desc">Browse through our collection of articles, user guides and FAQs.</p>
+            </div>
+            
+            <div class="info-card">
+                <!-- SVG mimicking the exact ticket icon in Screenshot 151 -->
+                <svg class="icon-img" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 5.5l4.5-4.5M2 13l4.5-4.5M10.5 20.5L22 9l-3-3L7.5 17.5l3 3z"></path>
+                    <path d="M13.5 10.5l-3 3" stroke="#e87c1e"></path>
+                    <path d="M17.5 6.5l-3 3" stroke="#e87c1e"></path>
+                </svg>
+                <h3 data-i18n="card2_title">Tickets</h3>
+                <p data-i18n="card2_desc">View your previous tickets; know their statuses and solutions.</p>
+            </div>
+        </div>
+
+        <section class="popular-section">
+            <h2><i class="fas fa-briefcase" style="color: #a0a0a0;"></i> <span data-i18n="popular_title">Popular Articles</span></h2>
+            
+            <ul class="article-list">
+                <li><a href="#"><i class="far fa-file-alt"></i> <span data-i18n="art_1">Checklist for product listing on the Affiliate Network</span></a></li>
+                <li><a href="#"><i class="far fa-file-alt"></i> <span data-i18n="art_2">How does Virexa Work?</span></a></li>
+                <li><a href="#"><i class="far fa-file-alt"></i> <span data-i18n="art_3">How can I access my affiliate link?</span></a></li>
+                <li><a href="#"><i class="far fa-file-alt"></i> <span data-i18n="art_4">Meta Conversions API (CAPI) Setup on Virexa</span></a></li>
+                <li><a href="#"><i class="far fa-file-alt"></i> <span data-i18n="art_5">How can I pick products on Virexa's affiliate network?</span></a></li>
+                <li><a href="#"><i class="far fa-file-alt"></i> <span data-i18n="art_6">How to List Your Products on the Virexa Affiliate Marketplace</span></a></li>
+                <li><a href="#"><i class="far fa-file-alt"></i> <span data-i18n="art_7">How to Set Up Two-Factor Authentication (2FA) on Virexa</span></a></li>
+                <li><a href="#"><i class="far fa-file-alt"></i> <span data-i18n="art_8">How to sign Up on Virexa</span></a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <div class="bottom-action">
+        <h2 data-i18n="footer_title">Still can’t find an answer?</h2>
+        <p data-i18n="footer_desc">Send us a ticket and we will get back to you.</p>
+        <a href="#" class="btn-ticket" data-i18n="footer_btn">Submit a ticket</a>
+    </div>
+
+    <div class="copyright-bar">
+        Powered by Zoho Desk
+    </div>
+
+    <!-- Floating Elements -->
+    <a href="#top" class="scroll-top">
+        <i class="fas fa-arrow-up" style="font-size: 14px;"></i>
+    </a>
+
+    <div class="chat-widget">
+        <div class="chat-bubble-popup">
+            <strong data-i18n="chat_greeting">We're Online!</strong><br>
+            <span style="color: var(--text-muted); font-size: 13px;" data-i18n="chat_help">How may I help you today?</span>
+        </div>
+        <div class="chat-btn">
+            <i class="fas fa-comment-alt" style="font-size: 22px;"></i>
+        </div>
+    </div>
+
+    <!-- Application Logic for Translations -->
+    <script>
+        // 1. Language Dropdown Toggle Logic
+        const langToggle = document.getElementById('langToggle');
+        const langMenu = document.getElementById('langMenu');
+
+        langToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            langMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function() {
+            langMenu.classList.remove('show');
+        });
+
+        // 2. Translation Dictionary Engine
+        const translations = {
+            en: {
+                nav_home: "Home", nav_my_area: "My Area", nav_kb: "Knowledge Base", nav_signin: "Sign In",
+                hero_title: "Welcome to Virexa", hero_subtitle: "Search our knowledge base or submit a ticket.",
+                search_placeholder: "Search articles",
+                card1_title: "Knowledge Base", card1_desc: "Browse through our collection of articles, user guides and FAQs.",
+                card2_title: "Tickets", card2_desc: "View your previous tickets; know their statuses and solutions.",
+                popular_title: "Popular Articles",
+                art_1: "Checklist for product listing on the Affiliate Network",
+                art_2: "How does Virexa Work?",
+                art_3: "How can I access my affiliate link?",
+                art_4: "Meta Conversions API (CAPI) Setup on Virexa",
+                art_5: "How can I pick products on Virexa's affiliate network?",
+                art_6: "How to List Your Products on the Virexa Affiliate Marketplace",
+                art_7: "How to Set Up Two-Factor Authentication (2FA) on Virexa",
+                art_8: "How to sign Up on Virexa",
+                footer_title: "Still can’t find an answer?", footer_desc: "Send us a ticket and we will get back to you.",
+                footer_btn: "Submit a ticket",
+                chat_greeting: "We're Online!", chat_help: "How may I help you today?",
+                lang_display: "English"
+            },
+            fr: {
+                nav_home: "Accueil", nav_my_area: "Mon Espace", nav_kb: "Base de Connaissances", nav_signin: "Se Connecter",
+                hero_title: "Bienvenue sur Virexa", hero_subtitle: "Recherchez dans notre base de connaissances ou soumettez un ticket.",
+                search_placeholder: "Rechercher des articles",
+                card1_title: "Base de Connaissances", card1_desc: "Parcourez notre collection d'articles, guides d'utilisation et FAQ.",
+                card2_title: "Billets", card2_desc: "Consultez vos billets précédents; connaissez leurs statuts et solutions.",
+                popular_title: "Articles Populaires",
+                art_1: "Liste de contrôle pour l'inscription de produits sur le réseau d'affiliation",
+                art_2: "Comment fonctionne Virexa ?",
+                art_3: "Comment puis-je accéder à mon lien d'affiliation ?",
+                art_4: "Configuration de l'API de conversions Meta (CAPI) sur Virexa",
+                art_5: "Comment choisir des produits sur le réseau d'affiliation de Virexa ?",
+                art_6: "Comment lister vos produits sur le marché d'affiliation",
+                art_7: "Comment configurer l'authentification à deux facteurs (2FA)",
+                art_8: "Comment s'inscrire sur Virexa",
+                footer_title: "Vous ne trouvez toujours pas de réponse ?", footer_desc: "Envoyez-nous un ticket et nous vous répondrons.",
+                footer_btn: "Soumettre un ticket",
+                chat_greeting: "Nous sommes en ligne !", chat_help: "Comment puis-je vous aider aujourd'hui ?",
+                lang_display: "Français"
+            },
+            es: {
+                nav_home: "Inicio", nav_my_area: "Mi Área", nav_kb: "Base de Conocimientos", nav_signin: "Iniciar Sesión",
+                hero_title: "Bienvenido a Virexa", hero_subtitle: "Busque en nuestra base de conocimientos o envíe un ticket.",
+                search_placeholder: "Buscar artículos",
+                card1_title: "Base de Conocimientos", card1_desc: "Navegue por nuestra colección de artículos, guías de usuario y preguntas frecuentes.",
+                card2_title: "Tickets", card2_desc: "Vea sus tickets anteriores; conozca sus estados y soluciones.",
+                popular_title: "Artículos Populares",
+                art_1: "Lista de verificación para la lista de productos en la Red de Afiliados",
+                art_2: "¿Cómo funciona Virexa?",
+                art_3: "¿Cómo puedo acceder a mi enlace de afiliado?",
+                art_4: "Configuración de la API de conversiones de Meta (CAPI)",
+                art_5: "¿Cómo elegir productos en la red de afiliados de Virexa?",
+                art_6: "Cómo listar sus productos en el mercado de afiliados",
+                art_7: "Cómo configurar la autenticación de dos factores (2FA)",
+                art_8: "Cómo registrarse en Virexa",
+                footer_title: "¿Aún no encuentras una respuesta?", footer_desc: "Envíenos un ticket y nos pondremos en contacto con usted.",
+                footer_btn: "Enviar un ticket",
+                chat_greeting: "¡Estamos en línea!", chat_help: "¿Cómo puedo ayudarle hoy?",
+                lang_display: "Español"
+            }
+        };
+
+        // 3. Execution function to swap text dynamically
+        function changeLanguage(langCode) {
+            const dictionary = translations[langCode];
+            
+            // Update UI text elements
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (dictionary[key]) {
+                    element.textContent = dictionary[key];
+                }
+            });
+
+            // Update placeholders (like the search bar)
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                if (dictionary[key]) {
+                    element.setAttribute('placeholder', dictionary[key]);
+                }
+            });
+
+            // Update the top dropdown text to show current language
+            document.getElementById('currentLangText').textContent = dictionary['lang_display'];
+        }
+    </script>
+</body>
+</html>
